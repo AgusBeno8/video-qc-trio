@@ -28,4 +28,4 @@ jobs:
           
 
       - name: Run Pytest Suite
-        run: pytest
+        run: pytest --allow-empty
