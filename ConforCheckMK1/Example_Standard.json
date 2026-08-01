@@ -1,0 +1,24 @@
+{
+        "video": {
+            "codec_name": "hevc",
+            "codec_profile": "Main",
+            "color_space": "1",
+            "color_primaries": "1",
+            "pixel_format": "yuv420p",
+            "resolution": "3840x2160",
+            "average_fps": 60.0,
+            "bitrate": 77.95,
+            "frame_rate_mode": "CFR"
+        },
+        "audio": {
+            "audio_streams": 1,
+            "audio_codec": "aac",
+            "bitrate_kbps": 320.0,
+            "audio_bit_depth": 32,
+            "audio_sample_rate": 48.0,
+            "audio_channels": 2,
+            "channel_layout": "stereo"
+        },
+        "analysis_status": "Compliant",
+        "errors": []
+    }

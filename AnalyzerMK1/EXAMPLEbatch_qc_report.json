@@ -1,0 +1,62 @@
+[
+    {
+        "batch_idnum": 1,
+        "file_name": "Tryoutdone.mp4",
+        "video": {
+            "codec_name": "hevc",
+            "codec_profile": "Main",
+            "file_size_mb": 10462.72,
+            "color_space": "BT.709 (HD/Rec.709)",
+            "color_primaries": "BT.709 (Rec.709)",
+            "pixel_format": "yuv420p",
+            "resolution": "3840x2160",
+            "total_frames": "64173",
+            "average_fps": 60.0,
+            "bitrate": 77.95,
+            "frame_rate_mode": "CFR",
+            "duration_mins": 17.83
+        },
+        "audio": {
+            "audio_streams": 1,
+            "audio_codec": "aac",
+            "bitrate_kbps": 320.0,
+            "audio_bit_depth": 32,
+            "audio_sample_rate": 48.0,
+            "audio_duration": 17.83,
+            "audio_channels": 2,
+            "channel_layout": "stereo"
+        },
+        "analysis_status": "Success",
+        "errors": []
+    },
+    {
+        "batch_idnum": 2,
+        "file_name": "Workflow Instagram Test.mp4",
+        "video": {
+            "codec_name": "h264",
+            "codec_profile": "Main",
+            "file_size_mb": 4.57,
+            "color_space": "BT.709 (HD/Rec.709)",
+            "color_primaries": "BT.709 (Rec.709)",
+            "pixel_format": "yuv420p",
+            "resolution": "1080x1920",
+            "total_frames": "129",
+            "average_fps": 29.97,
+            "bitrate": 8.18,
+            "frame_rate_mode": "CFR",
+            "duration_mins": 0.07
+        },
+        "audio": {
+            "audio_streams": 1,
+            "audio_codec": "aac",
+            "bitrate_kbps": 320.001,
+            "audio_bit_depth": 32,
+            "audio_sample_rate": 48.0,
+            "audio_duration": 0.07,
+            "audio_channels": 2,
+            "channel_layout": "stereo"
+        },
+        "analysis_status": "Success",
+        "errors": []
+    }
+]
