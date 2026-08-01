@@ -1,7 +1,11 @@
 MK1 Video Quality Control Suite:
 
 Python 3.10+ https://img.shields.io/badge/python-3.10%2B-blue.svg https://www.python.org/
+
 Engine: PyAV https://img.shields.io/badge/engine-PyAV%20(FFmpeg%20C--bindings)-green.svg)] https://pyav.org/
+
+Cross-Platform CI: https://github.com/AgusBeno8/video-qc-trio/actions/workflows/ci.yml/badge.svg https://github.com/AgusBeno8/video-qc-trio/actions
+
 License: MIT https://img.shields.io/badge/license-MIT-informational.svg)](LICENSE)
 
 A lightweight, high-throughput Python suite for Tier-1 video quality control, metadata inspection, and stream remuxing**. Built specifically for batch operations in media pipelines where high-end SaaS subscriptions are unnecessary, but precision C-level stream evaluation is required.
