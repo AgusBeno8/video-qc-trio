@@ -1,3 +1,4 @@
 >=av 18.0 (PyAv)
->= python 3.10+
+>=python 3.10+
+>=boto3
 pathlib and JSON included in python standard.

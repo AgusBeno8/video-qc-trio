@@ -1,0 +1,23 @@
+services:
+  localstack:
+    image: localstack/localstack:3.0.0
+    container_name: localstack_s3
+    ports:
+      - "127.0.0.1:4566:4566"
+    environment:
+      - SERVICES=s3,sqs
+      - AWS_DEFAULT_REGION=us-east-1
+
+  qc-app:
+    build: .
+    container_name: video_qc_trio
+    depends_on:
+      - localstack
+    environment:
+      - AWS_ENDPOINT_URL=http://localstack:4566
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+    volumes:
+      - .:/app
+    command: tail -f /dev/null
