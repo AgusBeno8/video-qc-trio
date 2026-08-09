@@ -18,14 +18,28 @@ compliance_standard = (SCRIPT_DIR / "Example_Standard.json").resolve()
 input_folder.mkdir(parents=True, exist_ok=True)
 output_folder.mkdir(parents=True, exist_ok=True)
 
+# Video extension suffixes for initial checks.
+VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".m4v", ".flv"}
+
 # 2. Safe Batch Processing Loop
-def batch_conformance_check(folder_path):
-    print(f"Starting batch analysis in: {folder_path}\n")
-    
-    # Check if directory exists
-    if not folder_path.exists() or not folder_path.is_dir():
-        print(f"Error: The directory {folder_path} does not exist.")
+def batch_analyze_videos(target_path):
+    target_path = Path(target_path)
+
+    if not target_path.exists():
+        print(f"Error: The path {target_path} does not exist.")
         return
+
+    # Determine if target_path is a single file or a directory
+    if target_path.is_file():
+        video_files = [target_path] if target_path.suffix.lower() in VIDEO_EXTENSIONS else []
+    else:
+        video_files = [f for f in target_path.iterdir() if f.is_file() and f.suffix.lower() in VIDEO_EXTENSIONS]
+
+    if not video_files:
+        print(f"No valid video files found at: {target_path}")
+        return
+
+    print(f"Starting analysis on {len(video_files)} video file(s)...\n")
     
     counter = 0
     all_reports = [] # Master list for JSON report output.
@@ -38,9 +52,9 @@ def batch_conformance_check(folder_path):
         print("Missing compliance standard JSON.")
 
     # 3. Iterate through all files in the folder
-    for file_path in folder_path.iterdir():
+    for file_path in video_files:
         # Filter for files matching your video extensions
-        if file_path.is_file():
+        if file_path.is_file() and file_path.suffix.lower() in VIDEO_EXTENSIONS:
             print(f"Processing: {file_path.name} file number: {counter}")
 
             # Dictionary per loop (per file) and counter:
@@ -243,9 +257,9 @@ def batch_conformance_check(folder_path):
                         if file_data["errors"] == standard_data["errors"]: # Empty error dict check
                             print("No errors, compliant")
                         else:
-                            print(f"Errors found: {file_data["errors"]}. Uncompliant")
+                            print(f"Errors found: {file_data['errors']}. Uncompliant")
                             file_data["analysis_status"] = "Uncompliant"
-                            file_data["Incompliances"].append(f"Errors: {file_data["errors"]}")
+                            file_data["Incompliances"].append(f"Errors: {file_data['errors']}")
 
 
                         # Video block:
