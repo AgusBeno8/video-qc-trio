@@ -29,4 +29,4 @@ My experience regarding the fields this project are dedicated to learning orches
 
 I am focusing on Qc Operator Metadata and artifacts detection currently after i post this project, but i intend to update these programs with first and foremost exemplified cloud workflows utilizing boto3-s3, daemons, and Docker enviroments in short time. A basic UI and ready-compiled cross-OS actions is also considered.
 
-1.1 Version Note: The Cloud Workflow mockup with localstack has been completed and added. Be sure to read the files "Video-qc-trio_1.1_Cloud_Setup.md" and "video-qc-trio_1.1 Cloud Mockup version Notes.md" To grasp the context of the updates and the differences.
+The Cloud Workflow mockup with localstack has been completed and added. Be sure to read the files "Video-qc-trio_1.1_Cloud_Setup.md" and "video-qc-trio_1.1 Cloud Mockup version Notes.md" To grasp the context of the updates and the differences.
