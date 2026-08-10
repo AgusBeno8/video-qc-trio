@@ -19,6 +19,8 @@ New additions:
 * bucket_daemon_setup folder (This is the folder that possesses the Python scripts that setup the S3-SQS bucket, and the daemon processing script both.)
 * Dockerfile (This is the main docker image setup script, runs automatically with "$ docker compose up -d", utilize -d to keep using the same terminal.)
 * Docker-compose.yml (This is the main docker compose YAML setup script that sets the Localstack services, which is an AWS server mockup, and the main video-qc-trio Service which possesses the programs, Bucket setup and daemon. Runs automatically with "$ docker compose up -d" as well together with the main dockerfile, utilize -d to keep using the same terminal.)
+* "Video-qc-trio_1.1_Cloud_Setup.md" - This very file. Explains the roadmap process to set up the mockup localstack cloud workflow.
+* "video-qc-trio_1.1 Cloud mockup Notes" specific per-file notes related to the changes within the scripts.
 
 ### 1) Docker image setup
 
