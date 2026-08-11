@@ -8,7 +8,7 @@ Cross-Platform CI: https://github.com/AgusBeno8/video-qc-trio/actions/workflows/
 
 License: MIT https://img.shields.io/badge/license-MIT-informational.svg)](LICENSE)
 
-A lightweight, high-throughput Python suite for Tier-1 video quality control, metadata inspection, and stream remuxing**. Built specifically for batch operations in media pipelines where high-end SaaS subscriptions are unnecessary, but precision C-level stream evaluation is required.
+A lightweight, high-throughput Python suite for Tier-1 video quality control, metadata inspection, and stream remuxing. Built specifically for batch operations in media pipelines where high-end SaaS subscriptions are unnecessary, but precision C-level stream evaluation is required.
 
 Developer Note: This suite is designed as an architectural reference and modular foundation. It operates via CLI / IDE execution rather than a desktop GUI, prioritizing raw engine performance, cross-platform stability, and transparent code structure over end-user packaging.
 
@@ -25,8 +25,6 @@ Utilize the specific READMEs and JSON report examples of the folders of every pr
 
 The inclusion of AI in these projects served as primarily learning leverage by documentation funneling, but also strict debugging, small-block acquiring that was analyzed properly, and late general checks pre delivery.
 
-My experience regarding the fields this project are dedicated to learning orchestrational python basics and foundations, video engineering learning across programs like davinci resolve, handbrake, mediainfo, qctools, and finally, Python-orchestrated custom programming using PyAv or wrappers, leveraging ffmpeg's performance. Spending hours and hours every single day chasing my career dream.
-
-I am focusing on Qc Operator Metadata and artifacts detection currently after i post this project, but i intend to update these programs with first and foremost exemplified cloud workflows utilizing boto3-s3, daemons, and Docker enviroments in short time. A basic UI and ready-compiled cross-OS actions is also considered.
+My experience regarding the fields this project are dedicated to learning orchestrational python basics and foundations, video engineering learning across programs like davinci resolve, handbrake, mediainfo, qctools, and finally, Python-orchestrated custom programming using PyAv or wrappers, leveraging ffmpeg's performance.
 
 The Cloud Workflow mockup with localstack has been completed and added. Be sure to read the files "Video-qc-trio_1.1_Cloud_Setup.md" and "video-qc-trio_1.1 Cloud Mockup version Notes.md" To grasp the context of the updates and the differences.
