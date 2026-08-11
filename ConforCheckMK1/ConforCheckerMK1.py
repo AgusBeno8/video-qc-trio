@@ -22,7 +22,7 @@ output_folder.mkdir(parents=True, exist_ok=True)
 VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".m4v", ".flv"}
 
 # 2. Safe Batch Processing Loop
-def batch_analyze_videos(target_path):
+def batch_conformance_check(target_path):
     target_path = Path(target_path)
 
     if not target_path.exists():
