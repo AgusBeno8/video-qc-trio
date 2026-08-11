@@ -1,10 +1,6 @@
 name: Cross-Platform CI
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: [push, pull_request]
 
 jobs:
   test:
@@ -35,4 +31,16 @@ jobs:
 
       - name: Verify boto3
         run: |
-          python -c "import boto3; print('boto3 linked successfully on', '${{ matrix.os }}')"
+         python -c "import boto3; print('boto3 linked successfully on', '${{ matrix.os }}')"
+
+      - name: Run Analyzer
+        run: |
+         python AnalyzerMK1/AnalyzerMK1.py AnalyzerMK1/InputFolder/Test1.mp4
+
+      - name: Run ConforChecker
+        run: |
+         python ConforCheckMK1/ConforCheckerMK1.py AnalyzerMK1/InputFolder/Test1.mp4
+
+      - name: Run Remuxer
+        run: |
+         python RemuxerMK1/RemuxerMK1.py AnalyzerMK1/InputFolder/Test1.mp4
